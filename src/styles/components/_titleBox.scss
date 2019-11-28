@@ -1,0 +1,175 @@
+
+
+.title-box {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    max-width: 1300px;
+    color: $white;
+    text-align: center;
+    vertical-align: center;
+    .inner-box {
+        margin-top: 130px;
+        margin-bottom: 50px;
+        .title {
+            font-weight: 700;
+            font-size: 2.7rem;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-weight: 400;
+        }
+        .description {
+            color: $gray-300;
+        }
+    }
+    
+    nav {
+        margin-top: 0;
+        ul {
+            padding-right: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0;
+            list-style: none;
+            padding-left: 0;
+            //border: solid 5px $white;
+            //border-radius: 3px;
+            
+            li {
+                padding-left: 0;
+                border: solid 5px $white;
+                border-left: 0;
+                flex-grow: 1;
+                box-sizing: border-box;
+                &:first-child {
+                    border-left: solid 5px $white;
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+                &:last-child {
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+                a {
+                    display: block;
+                    font-size: 1.2rem;
+                    padding: 15px 0;
+                    text-transform: uppercase;
+                    //letter-spacing: _font(letter-spacing);
+                    font-size: 1rem;
+                    font-weight: 600;
+                    border-bottom: 0;
+                    color: $white;
+                    &:hover {
+                        background-color: $purple;
+                    }
+
+                    &:active {
+                        background-color: $purple;
+                    }
+                }
+            }
+        }
+
+        .nav-ar {
+            li {
+                &:first-child {
+                    border-right: solid 5px $white;
+                    border-left: none;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+                &:last-child {
+                    border-right: solid 5px $white;
+                    border-left: solid 5px $white;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                }
+            }
+        }
+
+        
+    }
+}
+
+
+@include media-breakpoint-down(sm) {
+    .title-box {
+        color: $white;
+        text-align: center;
+        vertical-align: center;
+        
+        //padding: 0 15px;
+        .inner-box {
+            margin-top: 60px;
+        }
+        .title {
+            font-weight: 500;
+            font-size: 2rem;
+        }
+        .subtitle {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        .description {
+            color: $gray-400;
+        }
+
+        nav {
+            ul {
+                flex-direction: column;
+                min-width: 10rem;
+                max-width: 100%;
+                li {
+                    border: solid 5px $white;
+                    border-top: 0;
+                    width: 100%;
+                    &:first-child {
+                        border-top: solid 5px $white;
+                        border-radius:0;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                    }
+                    &:last-child {
+                        border-radius:0;
+                        border-bottom-left-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                    }
+
+                    a {
+                        min-width: 0;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .nav-ar {
+                li {
+                    &:first-child {
+                        border-right: solid 5px $white;
+                        border-left: solid 5px $white;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 0px;
+                        border-bottom-left-radius: 0px;
+                    }
+                    &:last-child {
+                        border-right: solid 5px $white;
+                        border-left: solid 5px $white;
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 5px;
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,70 @@
+section {
+    //padding-top: 40px;
+    margin-bottom: 30px;
+    .section-image {
+        text-align: center;
+        width: 100%;
+        img {
+            margin: 0 auto;
+            position: relative;
+        }
+        
+    }
+
+    .section-content {
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        background: none;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        .card-header {
+            background-color: transparent;
+            border: none;
+            padding: 15px 0;
+        }
+        .card-footer {
+            background-color: transparent;
+            border-color: $purple;
+            padding: 15px 0;
+            width: 100%;
+        }
+        .card-body{
+            background-color: transparent;
+            padding: 0;
+            padding-bottom: 20px;
+            p{
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+    
+}
+
+@include media-breakpoint-down(sm) {
+    section {
+        .headline {
+            &:after{
+            
+            }
+        }
+        
+        .section-image {
+        }
+        .section-content {
+            .card-body{
+                
+            }
+            .card-header {
+
+            }
+            .card-footer {
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+        
+    }
+}
